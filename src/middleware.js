@@ -10,5 +10,5 @@ const middleware = (request) => {
 export default middleware
 
 export const config = {
-    matcher: ["/studentlist/:path*","/study/:path*"]
+    matcher: ["/studentlist/:path*","/dashboard/detail/:path*"]
 }

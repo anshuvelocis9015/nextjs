@@ -6,6 +6,7 @@ export default async function page(props) {
     const users = await getUserList;
     const currentId = props.params.userId;
     const userData = users[currentId-1];
+    console.log(process.env);
     console.log("user----->", users);
     console.log("users props----->", props.params.userId);
     console.log("currentId----->", users[currentId-1]);

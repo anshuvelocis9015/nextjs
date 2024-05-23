@@ -1,6 +1,7 @@
 // import React from 'react'
 "use client"
 import { useState } from "react";
+import axios from "axios";
 
 export default function page(){
     const[name,setName] = useState("");
@@ -9,12 +10,20 @@ export default function page(){
 
     const addUser = async() =>{
         console.log(name,age,email);
-        let response = await fetch("http://localhost:3000/api/hello",{
-            method:"Post",
-            body:JSON.stringify({name,age,email})
-        });
-        response = await response.json();
-        console.log(response);
+        // let response = await fetch("http://localhost:3000/api/hello",{
+        //     method:"Post",
+        //     body:JSON.stringify({name,age,email})
+        // });
+        let response = await axios.put("http://localhost:3000/api/hello", {
+        name,
+        age,
+        email
+      },{
+        headers: {
+          'Content-Type': 'application/json'
+        }});
+        // response = await response.json();
+        console.log(response.data);
     }
   return (
     <div>
@@ -27,4 +36,3 @@ export default function page(){
   )
 }
 
-// export default page

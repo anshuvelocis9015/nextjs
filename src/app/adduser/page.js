@@ -14,7 +14,7 @@ export default function page(){
         //     method:"Post",
         //     body:JSON.stringify({name,age,email})
         // });
-        let response = await axios.put("http://localhost:3000/api/hello", {
+        let response = await axios.post("http://localhost:3000/api/hello", {
         name,
         age,
         email

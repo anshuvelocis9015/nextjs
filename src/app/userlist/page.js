@@ -16,7 +16,8 @@ export default async function page(){
             userList.map((item) =>{
                 return(
                     <div key={item.id}>
-                        <Link href={`userlist/${item.id}`}>{item.name}</Link>
+                        <span><Link href={`userlist/${item.id}`}>{item.name}</Link></span>
+                        <span><Link href={`userlist/${item.id}/update`}>Edit</Link></span>
                     </div>
                 )
             })

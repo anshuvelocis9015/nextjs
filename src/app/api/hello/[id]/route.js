@@ -17,3 +17,13 @@ export async function PUT(request,content){
     }
     return NextResponse.json({result:payload,success:true},{status:200})
 }
+export async function DELETE(request,content) {
+    let userid = content.params.id;
+    console.log(userid);
+    if(userid){
+        return NextResponse.json({result:"Delete Successfully",success:true},{status:200})
+
+    }
+    return NextResponse.json({result:"internal error",success:false},{status:400})
+    
+}

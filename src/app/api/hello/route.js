@@ -17,11 +17,3 @@ export async function POST(request){
     return NextResponse.json({result:"new user created",success:true},{status:200})
 }
 
-export async function PUT(request){
-    let payload = await request.json();
-    console.log(payload.name,payload.age,payload.email);
-    if(!payload.name || !payload.age || !payload.email){
-        return NextResponse.json({result:"required new field",success:false},{status:400})
-    }
-    return NextResponse.json({result:"update user",success:true},{status:200})
-}

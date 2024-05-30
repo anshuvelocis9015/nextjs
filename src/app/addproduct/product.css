@@ -1,0 +1,18 @@
+h1{
+    color: red;
+}
+.input{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 35px;
+    width: 300px;
+    padding-left: 10px;
+}
+.btn{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 35px;
+    width: 300px;
+}

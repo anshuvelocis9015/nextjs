@@ -9,3 +9,11 @@ export async function GET(){
     console.log(data);
     return NextResponse.json({result:data});
 }
+
+export async function POST(request){
+    const payload = await request.json();
+    const response = new Product(payload);
+    const result = await response.save();
+    console.log(result);
+    return NextResponse.json({result:result,success:true});
+}

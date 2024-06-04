@@ -1,8 +1,9 @@
 // import React from 'react'
+import DeleteProduct from '@/lib/model/DeleteProduct';
 import axios from 'axios'
 import Link from 'next/link'
 const getProductList = async() =>{
-    const product = await axios.get("http://localhost:3000/api/products",{
+    const product = await axios.get("http://localhost:3000/api/products",{cache:"no-cache"},{
         headers:{
             "Content-Type":"application/json"
         }
@@ -33,6 +34,9 @@ const page = async() => {
                         <td>{product.color}</td>
                         <td>{product.category}</td>
                         <td><Link href={"addproduct/"+product._id}>Edit Product</Link></td>
+                        <td>
+                            <DeleteProduct id={product._id}/>
+                        </td>
 
 
                     </tr>)

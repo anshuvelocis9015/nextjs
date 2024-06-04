@@ -1,5 +1,6 @@
 // import React from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 const getProductList = async() =>{
     const product = await axios.get("http://localhost:3000/api/products",{
         headers:{
@@ -31,6 +32,9 @@ const page = async() => {
                         <td>{product.price}</td>
                         <td>{product.color}</td>
                         <td>{product.category}</td>
+                        <td><Link href={"addproduct/"+product._id}>Edit Product</Link></td>
+
+
                     </tr>)
                 })}
             </tbody>

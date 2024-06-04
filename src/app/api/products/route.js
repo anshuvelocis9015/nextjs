@@ -7,7 +7,7 @@ connect()
 export async function GET(){
     let data = await Product.find();
     console.log(data);
-    return NextResponse.json({result:data});
+    return NextResponse.json({result:data,success:true});
 }
 
 export async function POST(request){

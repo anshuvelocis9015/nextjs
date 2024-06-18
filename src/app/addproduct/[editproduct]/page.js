@@ -5,10 +5,10 @@ import axios from "axios"
 import "../product.css"
 
 const page = (content) => {
-    const[name,setName] = useState(null);
-    const[price,setPrice] = useState(null);
-    const[color,setColor] = useState(null);
-    const[category,setCategory] = useState(null);
+    const[name,setName] = useState("");
+    const[price,setPrice] = useState("");
+    const[color,setColor] = useState("");   
+    const[category,setCategory] = useState("");
 
     useEffect(() =>{
         // console.log(content.params.editproduct);
@@ -48,7 +48,8 @@ const page = (content) => {
         <input type="text" value={price} placeholder="Add Price" className="input" onChange={(e) => setPrice(e.target.value)} />
         <input type="text" value={color} placeholder="Add Colors" className="input" onChange={(e) => setColor(e.target.value)} />
         <input type="text" value={category} placeholder="Add Categories" className="input" onChange={(e) => setCategory(e.target.value)} />
-        <button type="submit" onClick={updateData} className="btn">Update Product</button>        
+        <button type="submit" onClick={updateData} className="btn">Update Product</button> 
+        {/*24132+3460 = 27592-17000 = 10592 700+3000+2000+1300+1500+600+400+500+2000=11000 11000-10592=0408     */}
     </div>
   )
 }
